@@ -43,6 +43,20 @@ output and local IDE settings are excluded.
 See [AVG_COLOR_GENERATOR.md](AVG_COLOR_GENERATOR.md) for selection behavior,
 download retries, image fallbacks, and progress reporting.
 
+## Website backend
+
+`ClosestColorFunction.java` provides an Azure Functions HTTP endpoint that finds
+the closest saved artwork color:
+
+```text
+GET /api/closest-color?red=120&green=80&blue=160
+```
+
+It packages the saved color CSV, loads it once per Java process, and returns the
+closest artwork as JSON. Build the Azure staging package with `mvn package`.
+See [AZURE_FUNCTION.md](AZURE_FUNCTION.md) for responses, local setup, CORS, and
+deployment preparation.
+
 ## Data source
 
 Artwork metadata and image URLs originate from the Metropolitan Museum of Art's
