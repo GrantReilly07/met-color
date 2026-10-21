@@ -1,7 +1,7 @@
 # Met Color
 
-A Java program that calculates average RGB colors for selected artworks in the
-Metropolitan Museum of Art collection. It reads image URLs from `openaccess.csv`
+A Java program that calculates average RGB colors for artworks using 2D mediums in the
+Metropolitan Museum of Art collection. It reads image URLs from Huggingface's metmuseum `openaccess.csv`
 and downloads images directly, avoiding repeated object API requests.
 
 ## Requirements
